@@ -1,0 +1,1051 @@
+{
+	"info": {
+		"_postman_id": "b760cb33-636e-40df-8c1b-ddc8210433b0",
+		"name": "Laravel Coding Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Get Todos List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "filter_status_pending",
+									"value": "",
+									"description": "filter pending todos",
+									"type": "text"
+								},
+								{
+									"key": "filter_status_completed",
+									"value": "",
+									"description": "filter completed todos",
+									"type": "text"
+								},
+								{
+									"key": "filter_due_date",
+									"value": "",
+									"description": "today, this_week, next_week, overdue",
+									"type": "text"
+								},
+								{
+									"key": "filter_search",
+									"value": "",
+									"description": "search by title",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Todos List - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "filter_status_pending",
+											"value": "",
+											"description": "filter pending todos",
+											"type": "text"
+										},
+										{
+											"key": "filter_status_completed",
+											"value": "",
+											"description": "filter completed todos",
+											"type": "text"
+										},
+										{
+											"key": "filter_due_date",
+											"value": "",
+											"description": "today, this_week, next_week, overdue",
+											"type": "text"
+										},
+										{
+											"key": "filter_search",
+											"value": "",
+											"description": "search by title",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 08:04:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 08:04:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.24-0ubuntu0.18.04.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"todos\": [\n            {\n                \"id\": 4,\n                \"parent_id\": 1,\n                \"title\": \"this is another title\",\n                \"status\": 0,\n                \"due_date\": \"2021-01-04 00:00:00\",\n                \"created_at\": \"2021-01-14 07:32:15\",\n                \"updated_at\": null,\n                \"status_label\": {\n                    \"label\": \"Pending\",\n                    \"color\": \"success\"\n                }\n            },\n            {\n                \"id\": 8,\n                \"parent_id\": 1,\n                \"title\": \"this is another title\",\n                \"status\": 0,\n                \"due_date\": \"2021-01-14 00:00:00\",\n                \"created_at\": \"2021-01-14 08:00:31\",\n                \"updated_at\": null,\n                \"status_label\": {\n                    \"label\": \"Pending\",\n                    \"color\": \"success\"\n                }\n            },\n            {\n                \"id\": 9,\n                \"parent_id\": 1,\n                \"title\": \"this is another title\",\n                \"status\": 0,\n                \"due_date\": \"2021-01-14 00:00:00\",\n                \"created_at\": \"2021-01-14 08:00:34\",\n                \"updated_at\": null,\n                \"status_label\": {\n                    \"label\": \"Pending\",\n                    \"color\": \"success\"\n                }\n            },\n            {\n                \"id\": 10,\n                \"parent_id\": 1,\n                \"title\": \"this is another title\",\n                \"status\": 0,\n                \"due_date\": \"2021-01-19 00:00:00\",\n                \"created_at\": \"2021-01-14 08:04:24\",\n                \"updated_at\": null,\n                \"status_label\": {\n                    \"label\": \"Pending\",\n                    \"color\": \"success\"\n                }\n            },\n            {\n                \"id\": 7,\n                \"parent_id\": 1,\n                \"title\": \"this is another title\",\n                \"status\": 0,\n                \"due_date\": \"2021-01-27 00:00:00\",\n                \"created_at\": \"2021-01-14 07:47:24\",\n                \"updated_at\": null,\n                \"status_label\": {\n                    \"label\": \"Pending\",\n                    \"color\": \"success\"\n                }\n            },\n            {\n                \"id\": 1,\n                \"parent_id\": 0,\n                \"title\": \"this is another title\",\n                \"status\": 0,\n                \"due_date\": \"2021-01-30 00:00:00\",\n                \"created_at\": \"2021-01-14 07:22:15\",\n                \"updated_at\": null,\n                \"status_label\": {\n                    \"label\": \"Pending\",\n                    \"color\": \"success\"\n                }\n            },\n            {\n                \"id\": 5,\n                \"parent_id\": 1,\n                \"title\": \"this is another title\",\n                \"status\": 0,\n                \"due_date\": \"2021-01-30 00:00:00\",\n                \"created_at\": \"2021-01-14 07:46:15\",\n                \"updated_at\": null,\n                \"status_label\": {\n                    \"label\": \"Pending\",\n                    \"color\": \"success\"\n                }\n            },\n            {\n                \"id\": 6,\n                \"parent_id\": 1,\n                \"title\": \"this is another title\",\n                \"status\": 1,\n                \"due_date\": \"2021-01-30 00:00:00\",\n                \"created_at\": \"2021-01-14 07:47:18\",\n                \"updated_at\": null,\n                \"status_label\": {\n                    \"label\": \"Completed\",\n                    \"color\": \"success\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Toto Detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo/detail",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo",
+								"detail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Toto Detail - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/detail",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"detail"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:31:17 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:31:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.24-0ubuntu0.18.04.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully get the data.\",\n    \"data\": {\n        \"todo\": {\n            \"id\": 1,\n            \"parent_id\": 0,\n            \"title\": \"this is another title\",\n            \"status\": 0,\n            \"due_date\": \"2021-01-30 00:00:00\",\n            \"created_at\": \"2021-01-14 07:22:15\",\n            \"updated_at\": null,\n            \"status_label\": {\n                \"label\": \"Pending\",\n                \"color\": \"success\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "this is another title",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "due_date",
+									"value": "2021-01-19",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "1",
+									"description": "optional: if want to create a subtask then pass parent todo id",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "optional: if we want to create completed todo",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Todo - error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "this is another title",
+											"description": "required",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "due_date",
+											"value": "2021-01-30",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:29:00 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:29:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.24-0ubuntu0.18.04.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 400,\n    \"message\": \"The title field is required.\",\n    \"data\": []\n}"
+						},
+						{
+							"name": "Create Todo - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "this is another title",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "due_date",
+											"value": "2021-01-30",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:22:18 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:22:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.24-0ubuntu0.18.04.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully created.\",\n    \"data\": {\n        \"todo_id\": 3\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "updated title",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "due_date",
+									"value": "2021-01-29",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Todo - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "updated title",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "due_date",
+											"value": "2021-01-29",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/update",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:29:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:29:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.24-0ubuntu0.18.04.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully updated.\",\n    \"data\": []\n}"
+						},
+						{
+							"name": "Update Todo - error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "updated title",
+											"description": "required",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "due_date",
+											"value": "2021-01-29",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/update",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:29:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:29:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.24-0ubuntu0.18.04.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 400,\n    \"message\": \"The title field is required.\",\n    \"data\": []\n}"
+						},
+						{
+							"name": "Update Todo - not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "updated title",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "due_date",
+											"value": "2021-01-29",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/update",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:29:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:29:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.24-0ubuntu0.18.04.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Not Found.\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Todo Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Todo Delete - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/delete",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:30:24 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:30:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.24-0ubuntu0.18.04.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully deleted.\",\n    \"data\": []\n}"
+						},
+						{
+							"name": "Todo Delete - not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "30",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/delete",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:30:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jan 2021 07:30:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.24-0ubuntu0.18.04.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Not Found.\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
